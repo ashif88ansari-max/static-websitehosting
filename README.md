@@ -6,10 +6,10 @@ A beginner-friendly cloud project that demonstrates hosting a static HTML websit
 
 - [x] Website source (`index.html`) created
 - [x] Project documentation created
-- [ ] S3 bucket created and configured
-- [ ] Website files uploaded to S3
-- [ ] Static website hosting enabled
-- [ ] Website endpoint tested
+- [x] S3 bucket created and configured
+- [x] Website files uploaded to S3
+- [x] Static website hosting enabled
+- [x] Website endpoint tested
 
 **Important:** Uploading this repository to GitHub does not deploy it to AWS. Complete the AWS steps below when your AWS account is accessible. Do not claim the website is live until the endpoint has been tested.
 
@@ -58,12 +58,12 @@ GitHub stores the project source and documentation; it is not the AWS hosting se
 
 ## Testing checklist
 
-- [ ] `index.html` exists in the bucket root.
-- [ ] Static website hosting is enabled.
-- [ ] Index document is exactly `index.html`.
-- [ ] Public read access is configured only if intended.
-- [ ] Website endpoint loads successfully.
-- [ ] No private information is exposed.
+- [x] `index.html` exists in the bucket root.
+- [x] Static website hosting is enabled.
+- [x] Index document is exactly `index.html`.
+- [x] Public read access is configured only if intended.
+- [x] Website endpoint loads successfully.
+- [x] No private information is exposed.
 
 ## Learning outcomes
 
