@@ -1,40 +1,81 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AWS Static Website Hosting</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="A simple static website hosted using Amazon S3.">
+  <title>My Cloud Project | AWS S3 Static Website</title>
+  <style>
+    :root { --navy:#10233f; --blue:#2563eb; --pale:#eff6ff; --ink:#172033; --muted:#64748b; }
+    * { box-sizing:border-box; }
+    body { margin:0; font-family:Arial,Helvetica,sans-serif; color:var(--ink); line-height:1.6; background:#f8fafc; }
+    header { background:linear-gradient(120deg,#10233f,#1d4ed8); color:white; padding:22px 7%; }
+    nav { display:flex; justify-content:space-between; align-items:center; gap:18px; flex-wrap:wrap; }
+    nav a { color:#eaf2ff; text-decoration:none; margin-left:18px; font-size:14px; }
+    .brand { font-weight:700; letter-spacing:.3px; }
+    .hero { padding:76px 7% 84px; color:white; background:linear-gradient(120deg,#10233f,#1d4ed8); }
+    .tag { display:inline-block; background:#ffffff20; border:1px solid #ffffff55; padding:6px 12px; border-radius:30px; font-size:13px; }
+    h1 { max-width:760px; font-size:clamp(34px,6vw,58px); line-height:1.12; margin:22px 0 16px; }
+    .hero p { max-width:680px; color:#e1eaff; font-size:18px; }
+    .button { display:inline-block; margin-top:18px; padding:12px 20px; background:white; color:#1745a5; border-radius:8px; text-decoration:none; font-weight:700; }
+    main { max-width:1100px; margin:auto; padding:54px 22px; }
+    h2 { color:var(--navy); margin-top:0; }
+    .intro { color:var(--muted); max-width:760px; }
+    .grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:18px; margin:28px 0 48px; }
+    .card { background:white; border:1px solid #e2e8f0; border-radius:14px; padding:22px; box-shadow:0 5px 18px #0f172a08; }
+    .card h3 { margin:0 0 8px; color:#1d4ed8; }
+    .card p { color:var(--muted); margin:0; }
+    .steps { padding-left:22px; }
+    .steps li { padding:7px 0; }
+    .note { background:var(--pale); border-left:4px solid var(--blue); padding:16px 18px; border-radius:8px; color:#1e3a8a; }
+    footer { text-align:center; padding:25px; color:#64748b; background:#eaf0f8; font-size:14px; }
+    @media(max-width:600px){ nav a{margin:0 10px 0 0;} .hero{padding-top:55px;} }
+  </style>
 </head>
 <body>
-
-    <header>
-        <h1>Welcome to My AWS Project</h1>
-        <p>My First Cloud Computing Project</p>
-    </header>
-
-    <main>
-        <h2>About This Project</h2>
-        <p>
-            This website is hosted using Amazon Web Services (AWS)
-            S3 Static Website Hosting.
-        </p>
-
-        <h2>AWS Services Used</h2>
-        <ul>
-            <li>Amazon S3</li>
-            <li>AWS Management Console</li>
-            <li>GitHub</li>
-        </ul>
-
-        <button onclick="showMessage()">Click Here</button>
-        <p id="message"></p>
-    </main>
-
-    <footer>
-        <p>Created by Ashif | AWS Cloud Project 2026</p>
-    </footer>
-
-    <script src="script.js"></script>
+  <header>
+    <nav>
+      <div class="brand">MY CLOUD PROJECT</div>
+      <div><a href="#overview">Overview</a><a href="#services">AWS Services</a><a href="#steps">Workflow</a></div>
+    </nav>
+  </header>
+  <section class="hero">
+    <span class="tag">Beginner Cloud Engineering Project</span>
+    <h1>Static Website Hosting on Amazon S3</h1>
+    <p>A hands-on project demonstrating how a static HTML website can be stored and served using Amazon S3 website hosting.</p>
+    <a class="button" href="#overview">Explore the project</a>
+  </section>
+  <main>
+    <section id="overview">
+      <h2>Project Overview</h2>
+      <p class="intro">The goal of this project is to publish a simple static website using an Amazon S3 bucket. The website files are maintained in GitHub for version control, then uploaded to S3 when AWS access is available.</p>
+      <div class="grid">
+        <article class="card"><h3>01 · Website</h3><p>A responsive website built with HTML and CSS. No server-side code is required.</p></article>
+        <article class="card"><h3>02 · Storage</h3><p>Amazon S3 stores the website files as objects inside a bucket.</p></article>
+        <article class="card"><h3>03 · Hosting</h3><p>S3 static website hosting can serve the index document through a website endpoint.</p></article>
+      </div>
+    </section>
+    <section id="services">
+      <h2>AWS Services & Tools</h2>
+      <div class="grid">
+        <article class="card"><h3>Amazon S3</h3><p>Object storage used to store and serve static website files.</p></article>
+        <article class="card"><h3>GitHub</h3><p>Source control and project documentation repository.</p></article>
+        <article class="card"><h3>HTML & CSS</h3><p>Front-end technologies used to create the website.</p></article>
+      </div>
+    </section>
+    <section id="steps">
+      <h2>Implementation Workflow</h2>
+      <ol class="steps">
+        <li>Create an S3 bucket in the selected AWS Region.</li>
+        <li>Upload <code>index.html</code> to the bucket.</li>
+        <li>Enable Static website hosting and set the index document to <code>index.html</code>.</li>
+        <li>Configure only the required public read access if public website access is intended.</li>
+        <li>Open the S3 website endpoint and verify the page.</li>
+        <li>Document the configuration and testing evidence in this GitHub repository.</li>
+      </ol>
+      <p class="note"><strong>Project status:</strong> Website source and documentation are prepared. AWS deployment and live endpoint verification must be completed from the owner's AWS account.</p>
+    </section>
+  </main>
+  <footer>Built as a learning project · Amazon S3 Static Website Hosting</footer>
 </body>
 </html>
