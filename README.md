@@ -1,4 +1,4 @@
-# Static Website Hosting on Amazon S3
+ # Static Website Hosting on Amazon S3
 
 A beginner-friendly cloud project that demonstrates hosting a static HTML website using **Amazon S3**, with GitHub used for source control and documentation.
 
